@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>4D Tesseract Rotation Example</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    
+    <script src="scripts/shader_build.js"></script>
+    <script src="scripts/script.js"></script>
+  </head>
+  <body onload='load()' onresize="resize()">
+    <div>
+      <p><b>Time Speed</p>
+      <input type="range" min="0" max="10" value="8" id="time">
+      
+      <p><b>XY</b></p>
+      <input type="range" min="-500" max="500" value="0" id="_XY">
+      <p><b>YZ</b></p>
+      <input type="range" min="-500" max="500" value="0" id="_YZ">
+      <p><b>XZ</b></p>
+      <input type="range" min="-500" max="500" value="1" id="_XZ">
+
+      <p><b>XW</b></p>
+      <input type="range" min="-500" max="500" value="12.5" id="_XW">
+      <p><b>YW</b></p>
+      <input type="range" min="-500" max="500" value="60" id="_YW">
+      <p><b>ZW</b></p>
+      <input type="range" min="-500" max="500" value="50" id="_ZW">
+
+      </br>
+
+      <button onclick='reset()'>Reset</button>
+    </div>
+
+    <center>
+      <canvas id="canvas"></canvas>
+    </center>
+  </body>
+</html>

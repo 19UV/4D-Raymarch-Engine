@@ -1,0 +1,18 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: black;
+}
+
+div {
+  width: 250px;
+  height: 95%;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: white;
+  background-color: rgba(9, 160, 197, 0.842)
+}
