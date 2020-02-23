@@ -6,6 +6,8 @@ var iTime = 0;
 
 var timedelta = 0;
 
+var shape_val = 0;
+
 var _XY, _YZ, _XZ, _XW, _YW, _ZW = 0;
 var uXY, uYZ, uXZ, uXW, uYW, uZW;
 
@@ -20,6 +22,8 @@ function reset() {
 }
 
 function update_sliders() {
+  shape_val = parseInt(document.getElementById("shape").value);
+
   _XY = document.getElementById("_XY").value/50;
   _YZ = document.getElementById("_YZ").value/50;
   _XZ = document.getElementById("_XZ").value/50;
@@ -108,6 +112,9 @@ function init() {
   uYW = gl.getUniformLocation(program, "tYW");
   uZW = gl.getUniformLocation(program, "tZW");
 
+  uShape = gl.getUniformLocation(program, "uShape");
+  gl.uniform1f(uShape, shape_val);
+
   gl.uniform1f (uXY, _XY);
   gl.uniform1f (uYZ, _YZ);
   gl.uniform1f (uXZ, _XZ);
@@ -121,6 +128,8 @@ function init() {
     update_sliders();
 
     iTime += timedelta;
+
+    gl.uniform1f(uShape, shape_val);
 
     resize();
     gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);

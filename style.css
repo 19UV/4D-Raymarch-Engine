@@ -9,10 +9,19 @@ html, body {
 
 div {
   width: 250px;
+  font-size: 15px;
   height: 95%;
   position: fixed;
-  top: 15px;
-  left: 15px;
   color: white;
   background-color: rgba(9, 160, 197, 0.842)
+}
+
+.right_align {
+  top: 15px;
+  left: 15px;
+}
+
+.left_align {
+  top: 15px;
+  right: 15px;
 }

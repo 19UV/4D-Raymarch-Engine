@@ -2,7 +2,7 @@ precision mediump float;
 
 uniform float iTime;
 
-uniform float uShape;
+uniform int shape;
 
 uniform float tXY;
 uniform float tYZ;
@@ -81,13 +81,8 @@ float GetDist(vec4 p)
     float shortest_dist = MAX_DIST;
     
     float objs[OBJ_COUNT];
-
-    if (uShape == 0.0) {
-      objs[0] = sdSphere(rotate(p - vec4(0, 2.5, 6, 0), iTime*tXY, iTime*tYZ, iTime*tXZ, iTime*tXW, iTime*tYW, iTime*tZW), 1.5);
-    }
-    if (uShape == 1.0) {
-      objs[0] = sdBox(rotate(p - vec4(0, 2.5, 6, 0), iTime*tXY, iTime*tYZ, iTime*tXZ, iTime*tXW, iTime*tYW, iTime*tZW), vec4(1.0));
-    }
+    objs[0] = sdBox(rotate(p - vec4(0, 2.5, 6, 0), iTime*tXY, iTime*tYZ, iTime*tXZ, iTime*tXW, iTime*tYW, iTime*tZW), vec4(1.0));
+    //objs[0] = sdBox(box_rot - vec4(0, 2.5, 6, 0), vec4(1.0));
     objs[1] = p.y;
     
     for (int i=0;i<OBJ_COUNT;i++) shortest_dist = min(shortest_dist, objs[i]);

@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>4D Tesseract Rotation Example</title>
+    <title>Genius Hour 2020 - Demo 2</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     
     <script src="scripts/shader_build.js"></script>
     <script src="scripts/script.js"></script>
   </head>
   <body onload='load()' onresize="resize()">
-    <div>
+    <div class="right_align">
       <p><b>Time Speed</p>
       <input type="range" min="0" max="10" value="8" id="time">
       
@@ -31,6 +31,14 @@
       </br>
 
       <button onclick='reset()'>Reset</button>
+    </div>
+
+    <div class="left_align">
+      <p><b>Shape Select</b></p>
+      <select id="shape">
+        <option value="0">Hypersphere</option>
+        <option value="1">Tesseract</option>
+      </select>
     </div>
 
     <center>
