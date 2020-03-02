@@ -74,6 +74,10 @@ float sdBox( vec4 p, vec4 b )
   return length(max(q,0.0)) + min(max(q.x,max(q.y,max(q.z, q.w))),0.0);
 }
 
+float sdCone( vec4 p ) {
+    return length( vec3(p.xyz) ) - p.w
+}
+
 #define OBJ_COUNT 2
 
 float GetDist(vec4 p)
@@ -87,6 +91,9 @@ float GetDist(vec4 p)
     }
     if (uShape == 1.0) {
       objs[0] = sdBox(rotate(p - vec4(0, 2.5, 6, 0), iTime*tXY, iTime*tYZ, iTime*tXZ, iTime*tXW, iTime*tYW, iTime*tZW), vec4(1.0));
+    }
+    if (uShape == 2.0) {
+        objs[0] = sdCone(rotate(p - vec4(0, 2.5, 6, 0), iTime*tXY, iTime*tYZ, iTime*tXZ, iTime*tXW, iTime*tYW, iTime*tZW));
     }
     objs[1] = p.y;
     
