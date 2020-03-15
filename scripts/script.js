@@ -23,6 +23,12 @@ function reset() {
 
 function update_sliders() {
   shape_val = parseInt(document.getElementById("shape").value);
+  
+  if (shape_val == 0) {
+    document.getElementById('notes').innerHTML = "What did you expect?";
+  } else {
+    document.getElementById('notes').innerHTML = "";
+  }
 
   _XY = document.getElementById("_XY").value/50;
   _YZ = document.getElementById("_YZ").value/50;
