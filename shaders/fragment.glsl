@@ -75,7 +75,7 @@ float sdBox( vec4 p, vec4 b )
 }
 
 float sdCone( vec4 p ) {
-    return length( vec3(p.xyz) ) - p.w
+    return length( vec3(p.xyz) ) - p.w;
 }
 
 #define OBJ_COUNT 2
