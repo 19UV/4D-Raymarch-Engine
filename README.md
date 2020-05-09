@@ -1,11 +1,13 @@
 # Tesseract-Example
 May 9th, 2020
+
 [![Run on Repl.it](https://repl.it/badge/github/19UV/Tesseract-Example)](https://repl.it/github/19UV/Tesseract-Example)
 
 This project was an attempt at using a Raymarching (a type of Ray Tracing) method to render multi-dimensional objects. In this instance, a mathmatically defined 4d shape is projected into a 3d area, and in turn, projected onto a 2d screen.
 
 ## Equations
-All equations are written in GLSL, and are given a 4d point (p), and some attributes (radius, dimensions, etc) and return a distance. See http://www2.imm.dtu.dk/pubdb/edoc/imm6392.pdf (Sphere Tracing) for a more in depth explanation.
+All equations are written in GLSL, and are given a 4d point (p), and some attributes (radius, dimensions, etc) and return a distance. 
+See http://www2.imm.dtu.dk/pubdb/edoc/imm6392.pdf (Sphere Tracing) for a more in depth explanation.
 
 Tesseract
 ```
@@ -31,5 +33,13 @@ float sdCone( vec4 p ) {
 }
 ```
 
-
+## Future Work
+* Colors
+* Texturing (Image and Function)
+* Collision
+* Physics
+* Post-processing
+ * Fog
+ * Bloom
+Past this point, I hope to translate this to OpenGL, and eventually create a full-fledged graphics engine that can be used in both rendering and games.
 ![Rendered GIF](https://19uv.github.io/Tesseract-Example/docs/output.gif)
