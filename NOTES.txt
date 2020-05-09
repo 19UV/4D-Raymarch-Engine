@@ -1,3 +1,4 @@
 Shape Ids:
 0: Hypersphere
 1: Tesseract
+2: Hypercone
