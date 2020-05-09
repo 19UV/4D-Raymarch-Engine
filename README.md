@@ -3,7 +3,7 @@ May 9th, 2020
 
 [![Run on Repl.it](https://repl.it/badge/github/19UV/Tesseract-Example)](https://repl.it/github/19UV/Tesseract-Example)
 
-![Rendered GIF](https://19uv.github.io/Tesseract-Example/docs/screenshot.png)
+![Screenshot](https://19uv.github.io/Tesseract-Example/docs/screenshot.png)
 
 This project was an attempt at using a Raymarching (a type of Ray Tracing) method to render multi-dimensional objects. In this instance, a mathmatically defined 4d shape is projected into a 3d area, and in turn, projected onto a 2d screen.
 
